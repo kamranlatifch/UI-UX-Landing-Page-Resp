@@ -177,6 +177,21 @@ body {
 .mobile-nav-toggle {
   display: none;
 }
+.nav-list {
+  display: flex;
+  gap: var(--size-500);
+  /* gap: clamp(var(--size-500), 5vw, var(--size-800)); */
+}
+.nav-list a {
+  color: var(--clr-primary-400);
+  text-decoration: none;
+  /* font-weight: var(--fw-bold); */
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+  color: var(--clr-accent-400);
+}
 
 @media (max-width: 50em) {
   .primary-navigation {
@@ -186,6 +201,8 @@ body {
     inset: 7rem var(--size-400) auto;
     background: var(--clr-neutral-100);
     border-radius: var(--size-100);
+    max-width: 25rem;
+    margin-inline: auto;
     box-shadow: 0 0 0.5em rgb(0, 0, 0, 0.15);
   }
 
