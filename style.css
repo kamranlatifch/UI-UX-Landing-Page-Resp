@@ -136,6 +136,14 @@ body {
   font-family: var(--ff-body);
   color: var(--clr-primary-400);
 }
+p:not([class]) {
+  opacity: 0.7;
+  max-width: 35ch;
+}
+p[data-width='wide'] {
+  max-width: 100%;
+  /* max-width: 42ch; */
+}
 .button {
   cursor: pointer;
   text-decoration: none;
@@ -257,6 +265,7 @@ body {
 }
 
 /* Utilities Classes */
+
 .text-primary-400 {
   color: var(--clr-primary-400);
 }
@@ -325,6 +334,11 @@ body {
   width: min(var(--max-width), 100% - (var(--padding) * 2));
   margin-inline: auto;
 }
+
+.flow * + * {
+  margin-top: var(--flow-spacer, 3em);
+}
+
 .even-columns {
   display: grid;
   gap: 1rem;
