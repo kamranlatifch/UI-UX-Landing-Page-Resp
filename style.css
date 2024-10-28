@@ -683,3 +683,7 @@ input:where([type='text'], [type='email'], ) {
     display: inline-flex;
   }
 }
+.carousel {
+  display: grid;
+  justify-content: center;
+}
